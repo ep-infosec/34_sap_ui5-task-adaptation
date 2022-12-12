@@ -1,0 +1,60 @@
+{
+    "fileName": "manifest",
+    "layer": "CUSTOMER_BASE",
+    "fileType": "appdescr_variant",
+    "reference": "com.sap.base.app.id",
+    "id": "customer.com.sap.application.variant.id",
+    "namespace": "apps/com.sap.base.app.id/appVariants/customer.com.sap.application.variant.id/",
+    "content": [
+        {
+            "changeType": "appdescr_app_setTitle",
+            "content": {},
+            "texts": {
+                "i18n": "i18n/i18n.properties"
+            }
+        },
+        {
+            "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+            "content": {
+                "modelId": "i18n|sap.suite.ui.generic.template.ListReport|SEPMRA_C_PD_Product"
+            },
+            "texts": {
+                "i18n": "i18n/ListReport/SEPMRA_C_PD_Product/i18n.properties"
+            }
+        },
+        {
+            "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+            "content": {
+                "modelId": "i18n|sap.suite.ui.generic.template.ObjectPage|SEPMRA_C_PD_Product"
+            },
+            "texts": {
+                "i18n": "i18n/ObjectPage/SEPMRA_C_PD_Product/i18n.properties"
+            }
+        },
+        {
+            "changeType": "appdescr_ui5_addLibraries",
+            "content": {
+                "libraries": {
+                    "sap.m": {
+                        "minVersion": "1.73"
+                    }
+                }
+            }
+        },
+        {
+            "changeType": "appdescr_fe_changePageConfiguration",
+            "content": {
+                "page": "GLLineItemListReport",
+                "entityPropertyChange": {
+                    "propertyPath": "controlConfiguration/@com.sap.vocabularies.UI.v1.LineItem/tableSettings",
+                    "operation": "UPSERT",
+                    "propertyValue": {
+                        "type": "ResponsiveTable",
+                        "personalization": false,
+                        "enableMassEdit": true
+                    }
+                }
+            }
+        }
+    ]
+}
